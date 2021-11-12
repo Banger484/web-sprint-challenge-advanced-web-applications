@@ -122,8 +122,20 @@ In this project, you will demonstrate your mastery of these skills by creating *
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers to the questions within `interview_answers.md` file. These will not be counted as a part of your sprint score but will be helpful for preparing you for your endorsement interview, and enhancing overall understanding.
 1. Explain what a token is used for.
 
+Tokens are generated with security information and are used as a form of
+authentication between clients and servers.
+
 2. What steps can you take in your web apps to keep your data secure?
+
+You can use protected routes to certain pages, and use tokens for authorization.
 
 3. Describe how web servers work.
 
+Web servers are computers that hold web server software as well as all of the files of the websites that they host. Clients will use the browser to enter a url, that sends a http request to the designated server that hosts that specific page. The web server will then locate the specific files and return a HTTP response.
+
 4. Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+Create - POST Method
+Read - GET Method
+Update - PUT/PATCH Methods
+Delete - DELETE Method

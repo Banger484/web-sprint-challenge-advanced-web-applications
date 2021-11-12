@@ -40,7 +40,7 @@ const View = (props) => {
         axiosWithAuth()
         .put(`/articles/${article}`)
         .then(res => {
-            console.log(res)
+            
         })
         .catch(err => {
             console.log(err)
