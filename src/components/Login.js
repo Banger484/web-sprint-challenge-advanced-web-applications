@@ -8,8 +8,8 @@ const Login = () => {
     const [error, setError] = useState('')
     const [state, setState] = useState({
         credentials: {
-            username: '',
-            password: '' 
+            username: 'Lambda',
+            password: 'School' 
         }
     })
 
