@@ -1,5 +1,7 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import articleService from '../services/articleServices';
 import axiosWithAuth from '../utils/axiosWithAuth';
 
 import Article from './Article';
@@ -15,8 +17,7 @@ const View = (props) => {
         axiosWithAuth()
         .get('/articles')
         .then(res => {
-            console.log(res.data)
-            setArticles(res.data)
+        setArticles(res.data)
         })
         .catch(err => {
             console.log(err)
@@ -24,9 +25,26 @@ const View = (props) => {
     }, [])
 
     const handleDelete = (id) => {
+
+        axiosWithAuth()
+        .delete(`/articles/${id}`)
+        .then(res => {
+            setArticles(articles.filter(article => article.id !== id))
+        })
+        .catch(err => {
+            console.log(err)
+        })
     }
 
     const handleEdit = (article) => {
+        axiosWithAuth()
+        .put(`/articles/${article}`)
+        .then(res => {
+            console.log(res)
+        })
+        .catch(err => {
+            console.log(err)
+        })
     }
 
     const handleEditSelect = (id)=> {
