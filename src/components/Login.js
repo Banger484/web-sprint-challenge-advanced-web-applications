@@ -2,11 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Login = () => {
+
+    const handleLogin = () => {
+        console.log('something.')
+    }
     
     return(<ComponentContainer>
         <ModalContainer>
             <h1>Welcome to Blogger Pro</h1>
             <h2>Please enter your account information.</h2>
+            <h3>Username: <input type='text' id='username' placeholder='Please enter your username'/></h3>
+            <h3>Password: <input type='password' id='password' placeholder='Please enter your password'/></h3>
+            <p id='error'>Some error text here.</p>
+            <button onClick={handleLogin}>Login</button>
         </ModalContainer>
     </ComponentContainer>);
 }
